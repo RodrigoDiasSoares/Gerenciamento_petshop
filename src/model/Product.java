@@ -9,6 +9,7 @@ public class Product {
     private String description;
     private String price;
     private int quantity;
+    private Provider provider;
 
     public int getNumber() {
         return productCode;
@@ -40,6 +41,22 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(int productCode) {
+        this.productCode = productCode;
+    }
+
+    public Provider getProvider() {
+        return provider;
+    }
+
+    public void setProvider(Provider provider) {
+        this.provider = provider;
     }
     
     
