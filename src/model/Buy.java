@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * @author rds_d
  */
-public class By {
+public class Buy {
     
     private int byId;
     private String serviceRendered;
@@ -17,10 +17,10 @@ public class By {
     private Client client;
     private ArrayList<Product> list;
     
-    public By() {
+    public Buy() {
     }
     
-    public By(String serviceRendered, String note, Date date, double price, int discount) {
+    public Buy(String serviceRendered, String note, Date date, double price, int discount) {
         this.serviceRendered = serviceRendered;
         this.note = note;
         this.date = date;

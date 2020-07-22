@@ -9,7 +9,7 @@ import java.util.Date;
 public class Client extends Person {
 
     private String email;
-    private ArrayList<By> serviceOrder;
+    private ArrayList<Buy> serviceOrder;
     private Pet pet;
 
     public String getEmail() {
@@ -20,11 +20,11 @@ public class Client extends Person {
         this.email = email;
     }
 
-    public ArrayList<By> getServiceOrder() {
+    public ArrayList<Buy> getServiceOrder() {
         return serviceOrder;
     }
 
-    public void setServiceOrder(ArrayList<By> serviceOrder) {
+    public void setServiceOrder(ArrayList<Buy> serviceOrder) {
         this.serviceOrder = serviceOrder;
     }
 
