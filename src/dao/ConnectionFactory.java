@@ -11,9 +11,9 @@ import java.util.logging.Logger;
 public class ConnectionFactory {
     private static final String userName = "test";
     private static final String password = "1234";
-    private static final String url = "jdbc:mysql://localhost:3306/crud?useSSL=false";
+    private static final String url = "jdbc:mysql://localhost:3306/petshop?useSSL=false";
     
-    public static Connection CreateConnection(){
+    public static Connection createConnection(){
         try {
             
             Class.forName("com.mysql.jdbc.Driver");

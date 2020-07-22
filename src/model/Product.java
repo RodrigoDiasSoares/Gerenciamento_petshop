@@ -5,18 +5,26 @@ package model;
  */
 public class Product {
     
-    private int productCode;
+    private int id;
     private String description;
-    private String price;
+    private double price;
     private int quantity;
     private Provider provider;
 
+    public Product(String description, double price, int quantity) {
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        
+    }
+    
+    
     public int getNumber() {
-        return productCode;
+        return id;
     }
 
     public void setNumber(int number) {
-        this.productCode = number;
+        this.id = number;
     }
 
     public String getDescription() {
@@ -27,11 +35,11 @@ public class Product {
         this.description = description;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -43,12 +51,12 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public int getProductCode() {
-        return productCode;
+    public int getId() {
+        return id;
     }
 
-    public void setProductCode(int productCode) {
-        this.productCode = productCode;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Provider getProvider() {
@@ -58,6 +66,5 @@ public class Product {
     public void setProvider(Provider provider) {
         this.provider = provider;
     }
-    
     
 }
