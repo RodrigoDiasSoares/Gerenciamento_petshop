@@ -11,6 +11,10 @@ public class Product {
     private int quantity;
     private Provider provider;
 
+    public Product() {
+    }
+
+    
     public Product(String description, double price, int quantity) {
         this.description = description;
         this.price = price;

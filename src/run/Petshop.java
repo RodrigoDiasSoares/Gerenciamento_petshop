@@ -26,9 +26,11 @@ public class Petshop extends Application {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
-                Product p = new Product("ração de cachorro", 20, 50);
+                Product p = new Product("semente de girassol", 15, 20);
+                p.setId(4);
                 ProductDAO dao = new ProductDAO();
-                dao.insert(p);
+                //dao.insert(p);
+                dao.updade(p);
             }
         });
 
@@ -48,9 +50,7 @@ public class Petshop extends Application {
     public static void main(String[] args) {
         launch(args);
         //description, price, quntity
-        Product p = new Product("ração de cachorro", 20, 50);
-        ProductDAO dao = new ProductDAO();
-        dao.insert(p);
+        
     }
 
 }
