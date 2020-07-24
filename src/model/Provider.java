@@ -10,6 +10,7 @@ public class Provider {
     private String name;
     private String email;
     private String telephone;
+    private int id;
     private ArrayList<Product> list;
 
     public String getName() {
@@ -43,6 +44,13 @@ public class Provider {
     public void setList(ArrayList<Product> list) {
         this.list = list;
     }
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     
 }

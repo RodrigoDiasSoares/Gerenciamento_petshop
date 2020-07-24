@@ -21,7 +21,7 @@ public class ProductDAO {
         try{
             conn = new ConnectionFactory().createConnection();
         }catch(Exception e){
-            throw new RuntimeException("Error 2: " + e);
+            throw new RuntimeException("Error connection 1: " + e);
         }
     }
     
@@ -35,7 +35,7 @@ public class ProductDAO {
            pstm.setInt(3, product.getQuantity());
            pstm.execute();
         }catch(Exception e){
-            throw new RuntimeException("Error 3:" + e);
+            throw new RuntimeException("Error 2:" + e);
         }finally{
             try{
                 if (pstm != null) pstm.close();
@@ -87,7 +87,7 @@ public class ProductDAO {
             pstm.execute(sql);
         } catch (Exception e) {
             
-            throw new RuntimeException("Error close 3: " + e);
+            throw new RuntimeException("Error close 4: " + e);
             
         }finally{
             
@@ -118,7 +118,7 @@ public class ProductDAO {
                 
             }
         } catch (Exception e) {
-            throw new RuntimeException("Error 4: " + e);
+            throw new RuntimeException("Error 5: " + e);
         }finally{
             
             try {
@@ -151,7 +151,7 @@ public class ProductDAO {
                 
             }
         } catch (Exception e) {
-            throw new RuntimeException("Error 4: " + e);
+            throw new RuntimeException("Error 5: " + e);
         }finally{
             
             try {
@@ -161,7 +161,7 @@ public class ProductDAO {
                 
                 
             } catch (Exception e) {
-                throw new RuntimeException("Error close 4: " + e);
+                throw new RuntimeException("Error close 5: " + e);
             }
         }
         

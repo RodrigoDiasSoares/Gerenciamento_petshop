@@ -1,17 +1,25 @@
 package model;
 
-import java.util.Date;
+import java.sql.Date;
 /**
  * @author Rodrigo Dias Soares
  */
 public class Person {
-    
+    protected int id;
     protected String name;
-    protected String cpf;
-    protected String telephone;
-    protected String cellPhone;
-    protected char gender;
+    protected int cpf;
+    protected int telephone;
+    protected int cellPhone;
+    protected String gender;
     protected Date dateOfBirth;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -21,35 +29,35 @@ public class Person {
         this.name = name;
     }
 
-    public String getCpf() {
+    public int getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(int cpf) {
         this.cpf = cpf;
     }
 
-    public String getTelephone() {
+    public int getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(String telephone) {
+    public void setTelephone(int telephone) {
         this.telephone = telephone;
     }
 
-    public String getCellPhone() {
+    public int getCellPhone() {
         return cellPhone;
     }
 
-    public void setCellPhone(String cellPhone) {
+    public void setCellPhone(int cellPhone) {
         this.cellPhone = cellPhone;
     }
     
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
