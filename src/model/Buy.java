@@ -1,14 +1,14 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * @author rds_d
  */
 public class Buy {
     
-    private int byId;
+    private int id;
     private String serviceRendered;
     private String note;
     private Date date;
@@ -28,12 +28,12 @@ public class Buy {
         this.discount = discount;
     }
 
-    public int getById() {
-        return byId;
+    public int getId() {
+        return id;
     }
 
-    public void setById(int byId) {
-        this.byId = byId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getServiceRendered() {
@@ -80,8 +80,8 @@ public class Buy {
         return client;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setClient(int clientId) {
+        this.client.setId(clientId);
     }
 
     public ArrayList<Product> getProduct() {
