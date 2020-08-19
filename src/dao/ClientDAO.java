@@ -27,7 +27,8 @@ public class ClientDAO {
     }
 
     public void insert(Client client) {
-        String sql = "insert into client(name, cpf, email, telephone, cellphone, gender, dateofbirth, pet) values (?,?,?,?,?,?,?,?)";
+        String sql = "insert into client(name, cpf, email, telephone, cellphone,"
+                   + " gender, dateofbirth) values (?,?,?,?,?,?,?)";
 
         try {
             pstm = conn.prepareStatement(sql);
@@ -38,7 +39,6 @@ public class ClientDAO {
             pstm.setInt(5, client.getCellPhone());
             pstm.setString(6, client.getGender());
             pstm.setDate(7, client.getDateOfBirth());
-            pstm.setInt(8, client.getPet());
             pstm.execute();
         } catch (Exception e) {
             throw new RuntimeException("Error 2:" + e);
@@ -60,8 +60,8 @@ public class ClientDAO {
 
     public void updade(Client client) {
 
-        String sql = "update client set name = ?, cpf = ?, email = ?, telephone = ?,"
-                + " cellphone = ?, gender = ?, dateofbirth = ?, pet = ?"
+        String sql = "update client set name = ?, cpf = ?, email = ?,"
+                + " telephone = ?, cellphone = ?, gender = ?, dateofbirth = ?"
                 + " where id = ?";
 
         try {
@@ -73,7 +73,6 @@ public class ClientDAO {
             pstm.setInt(5, client.getCellPhone());
             pstm.setString(6, client.getGender());
             pstm.setDate(7, client.getDateOfBirth());
-            pstm.setInt(8, client.getPet());
             pstm.execute();
         } catch (Exception e) {
 
@@ -141,7 +140,6 @@ public class ClientDAO {
                 e.setCellPhone(rs.getInt("cellphone"));
                 e.setGender(rs.getString("gender"));
                 e.setDateOfBirth(rs.getDate("dateofbirth"));
-                e.setId(rs.getInt("id"));
                 list.add(e);
 
             }
@@ -182,7 +180,6 @@ public class ClientDAO {
                 e.setCellPhone(rs.getInt("cellphone"));
                 e.setGender(rs.getString("gender"));
                 e.setDateOfBirth(rs.getDate("dateofbirth"));
-                e.setId(rs.getInt("id"));
                 list.add(e);
             }
         } catch (Exception e) {

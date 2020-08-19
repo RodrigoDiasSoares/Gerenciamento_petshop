@@ -10,7 +10,7 @@ public class Client extends Person {
 
     private String email;
     private ArrayList<Buy> serviceOrder;
-    private int pet;
+    private ArrayList<Pet> listPet;
 
     public String getEmail() {
         return email;
@@ -28,11 +28,11 @@ public class Client extends Person {
         this.serviceOrder = serviceOrder;
     }
 
-    public int getPet() {
-        return pet;
+    public ArrayList<Pet> getListPet() {
+        return listPet;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet.getId();
+    public void setListPet(ArrayList<Pet> listPet) {
+        this.listPet = listPet;
     }
 }
