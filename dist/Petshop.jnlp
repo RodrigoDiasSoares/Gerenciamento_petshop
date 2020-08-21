@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Petshop.jnlp">
+  <information>
+    <title>Petshop</title>
+    <vendor>rds_d</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Petshop.jar" size="28460" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="run.Petshop"  name="Petshop" />
+  <update check="always"/>
+</jnlp>
